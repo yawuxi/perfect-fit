@@ -1,0 +1,26 @@
+{
+  "name": "perfect-fit",
+  "version": "0.0.0",
+  "description": "Perfect Fit is a GNOME extension that auto-centers windows and resizes them to 80% of the screen. It ensures a clean, consistent layout for a better workflow. Lightweight, efficient, and hassle-free!",
+  "type": "module",
+  "private": false,
+  "author": "Dmytro Rylov <ryliov.work@gmail.com>",
+  "license": "LGPL-3.0-or-later",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yawuxi/perfect-fit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yawuxi/perfect-fit/issues"
+  },
+  "homepage": "https://github.com/yawuxi/perfect-fit#readme",
+  "devDependencies": {
+    "eslint": "^9.21.0",
+    "eslint-plugin-jsdoc": "^50.6.3",
+    "typescript": "^5.8.2"
+  },
+  "dependencies": {
+    "@girs/gjs": "^4.0.0-beta.21",
+    "@girs/gnome-shell": "^47.0.2"
+  }
+}

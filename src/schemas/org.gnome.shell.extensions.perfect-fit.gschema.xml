@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+    <schema id="org.gnome.shell.extensions.perfect-fit" path="/org/gnome/shell/extensions/perfect-fit/">
+        <key name="scale-factor" type="d">
+            <default>0.8</default>
+            <summary>Window size multiplier</summary>
+            <description>Multiplier to apply to window width/height (from 0.5 to 1.0)</description>
+        </key>
+
+        <key name="resize-and-fit" type="as">
+            <default><![CDATA[['<Super>F']]]></default>
+            <summary>Short cut</summary>
+            <description>Short cut for Perfect Fit</description>
+        </key>
+    </schema>
+</schemalist>

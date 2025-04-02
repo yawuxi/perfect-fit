@@ -1,0 +1,9 @@
+{
+  "name": "Perfect Fit",
+  "description": "Perfect fit extension",
+  "uuid": "perfect-fit@ryliov.work.com",
+  "url": "https://github.com/yawuxi/perfect-fit",
+  "settings-schema": "org.gnome.shell.extensions.perfect-fit",
+  "gettext-domain": "perfect-fit",
+  "shell-version": ["48"]
+}
