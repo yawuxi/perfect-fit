@@ -23,7 +23,7 @@ import Meta from 'gi://Meta';
 import * as Main from 'resource:///org/gnome/shell/ui/main.js';
 
 export default class PerfectFitExtension extends Extension {
-  private _settings: Gio.Settings;
+  private _settings: Gio.Settings | null;
   private _focusSignalId: number | undefined;
 
   constructor(metadata: ExtensionMetadata) {
@@ -45,7 +45,7 @@ export default class PerfectFitExtension extends Extension {
           const monitor = window.get_monitor();
           const monitorGeometry = global.display.get_monitor_geometry(monitor);
 
-          const scaleFactor = this._settings.get_double('scale-factor');
+          const scaleFactor = this._settings?.get_double('scale-factor') ?? 0.8;
 
           const newWindowWidth = monitorGeometry.width * scaleFactor;
           const newWindowHeight = monitorGeometry.height * scaleFactor - Main.panel.height;
@@ -70,5 +70,6 @@ export default class PerfectFitExtension extends Extension {
     }
 
     global.display.remove_keybinding('resize-and-fit');
+    this._settings = null;
   }
 }
