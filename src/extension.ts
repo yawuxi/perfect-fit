@@ -68,8 +68,7 @@ export default class PerfectFitExtension extends Extension {
     if (this._focusSignalId) {
       global.display.disconnect(this._focusSignalId)      
     }
-
-    global.display.remove_keybinding('resize-and-fit');
+    Main.wm.removeKeybinding('resize-and-fit');
     this._settings = null;
   }
 }
