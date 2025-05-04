@@ -22,6 +22,9 @@ Open the extension settings to:
 ## Notes
 The hotkey customization component in `prefs.ts` was adapted from [Tiling Shell](https://github.com/domferr/tilingshell). Credit to the original authors for their clean and reusable implementation.
 
+## Todo
+- [ ] The extension cannot correctly position GNOME Terminal in the center of the screen.
+
 ## Contacts
 Email: ryliov.work@gmail.com
 Telegram: @yawuxi
