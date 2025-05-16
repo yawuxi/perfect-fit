@@ -136,14 +136,22 @@ export default class PerfectFitPreferences extends ExtensionPreferences {
     scaleRow.activatable_widget = scaleSlider;
     group.add(scaleRow);
 
-    const shortcutRow = new Adw.ActionRow({
-      title: _('Shortcut'),
+    const centerAndFitShortCutRow = new Adw.ActionRow({
+      title: _('Center and fit'),
     });
 
-    const shortcutButton = new ShortcutSettingButton('resize-and-fit', settings);
+    const centerAndFitShortCutButton = new ShortcutSettingButton('resize-and-fit', settings);
+    centerAndFitShortCutRow.add_suffix(centerAndFitShortCutButton);
+    centerAndFitShortCutRow.activatable_widget = centerAndFitShortCutButton;
+    group.add(centerAndFitShortCutRow);
 
-    shortcutRow.add_suffix(shortcutButton);
-    shortcutRow.activatable_widget = shortcutButton;
-    group.add(shortcutRow);
+    const centerWithoutFitShortcutRow = new Adw.ActionRow({
+        title: _('Center without fit'),
+    });
+
+    const centerWithoutFitShortCutButton = new ShortcutSettingButton('resize', settings);
+    centerWithoutFitShortcutRow.add_suffix(centerWithoutFitShortCutButton);
+    centerWithoutFitShortcutRow.activatable_widget = centerWithoutFitShortCutButton;
+    group.add(centerWithoutFitShortcutRow);
   }
 }

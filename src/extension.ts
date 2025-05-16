@@ -62,13 +62,40 @@ export default class PerfectFitExtension extends Extension {
         }
       }
     );
+
+    Main.wm.addKeybinding(
+      'resize',
+      this._settings,
+      Meta.KeyBindingFlags.NONE,
+      Shell.ActionMode.NORMAL,
+      () => {
+        const window = global.display.get_focus_window();
+
+        if (window) {
+          const monitor = window.get_monitor();
+          const monitorGeometry = global.display.get_monitor_geometry(monitor);
+
+          const windowRect = window.get_frame_rect();
+
+          window.unmaximize(Meta.MaximizeFlags.BOTH);
+
+          window.move_frame(
+            true,
+            Math.floor((monitorGeometry.width - windowRect.width) / 2),
+            Math.floor((monitorGeometry.height - windowRect.height + Main.panel.height) / 2),
+          );
+        }
+      }
+    );
   }
 
   disable() {
     if (this._focusSignalId) {
       global.display.disconnect(this._focusSignalId)      
     }
+
     Main.wm.removeKeybinding('resize-and-fit');
+    Main.wm.removeKeybinding('resize');
     this._settings = null;
   }
 }

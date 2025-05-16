@@ -9,8 +9,14 @@
 
         <key name="resize-and-fit" type="as">
             <default><![CDATA[['<Super>F']]]></default>
-            <summary>Short cut</summary>
-            <description>Short cut for Perfect Fit</description>
+            <summary>Center and fit</summary>
+            <description>This short cut centers and resizing window</description>
+        </key>
+
+        <key name="resize" type="as">
+            <default><![CDATA[['<Super><Shift>F']]]></default>
+            <summary>Center without resize</summary>
+            <description>This short cut centers window without resizing</description>
         </key>
     </schema>
 </schemalist>
