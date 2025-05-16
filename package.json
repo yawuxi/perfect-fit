@@ -1,6 +1,6 @@
 {
   "name": "perfect-fit",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Perfect Fit is a lightweight GNOME Shell extension that improves your workflow by automatically centering windows and resizing them to a customizable portion of the screen.",
   "type": "module",
   "private": false,
