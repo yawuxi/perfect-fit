@@ -54,8 +54,8 @@ export default class PerfectFitExtension extends Extension {
 
           window.move_resize_frame(
             true,
-            Math.floor((monitorGeometry.width - newWindowWidth) / 2),
-            Math.floor((monitorGeometry.height - newWindowHeight + Main.panel.height) / 2),
+            monitorGeometry.x + Math.floor((monitorGeometry.width - newWindowWidth) / 2),
+            monitorGeometry.y + Math.floor((monitorGeometry.height - newWindowHeight + Main.panel.height) / 2),
             newWindowWidth,
             newWindowHeight
           );
@@ -81,8 +81,8 @@ export default class PerfectFitExtension extends Extension {
 
           window.move_frame(
             true,
-            Math.floor((monitorGeometry.width - windowRect.width) / 2),
-            Math.floor((monitorGeometry.height - windowRect.height + Main.panel.height) / 2),
+            monitorGeometry.x + Math.floor((monitorGeometry.width - windowRect.width) / 2),
+            monitorGeometry.y + Math.floor((monitorGeometry.height - windowRect.height + Main.panel.height) / 2),
           );
         }
       }
