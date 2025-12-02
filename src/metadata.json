@@ -5,5 +5,5 @@
   "url": "https://github.com/yawuxi/perfect-fit",
   "settings-schema": "org.gnome.shell.extensions.perfect-fit",
   "gettext-domain": "perfect-fit",
-  "shell-version": ["48"]
+  "shell-version": ["48", "49"]
 }
