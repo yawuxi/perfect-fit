@@ -26,5 +26,5 @@ The hotkey customization component in `prefs.ts` was adapted from [Tiling Shell]
 - [ ] The extension cannot correctly position GNOME Terminal in the center of the screen.
 
 ## Contacts
-Email: ryliov.work@gmail.com
+Email: yawuxi@proton.me
 Telegram: @yawuxi
