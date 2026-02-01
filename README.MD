@@ -12,7 +12,9 @@ Perfect Fit is a lightweight GNOME Shell extension that improves your workflow b
 - 🧘 Hassle-Free Workflow: Keeps your workspace tidy with one simple shortcut.
 
 ## Usage
-By default, you can trigger Perfect Fit using a keyboard shortcut <kbd>SUPER</kbd>+<kbd>F</kbd>. When activated, the currently focused window will be resized and centered on the screen.
+By default, you can trigger Perfect Fit using the keyboard shortcut <kbd>SUPER</kbd>+<kbd>F</kbd>. When activated, the currently focused window is resized and centered on the screen.
+
+Alternatively, you can use <kbd>SUPER</kbd>+<kbd>SHIFT</kbd>+<kbd>F</kbd>, which centers the focused window without resizing it.
 
 ## Customization
 Open the extension settings to:
