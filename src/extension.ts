@@ -50,6 +50,7 @@ export default class PerfectFitExtension extends Extension {
           const newWindowWidth = monitorGeometry.width * scaleFactor;
           const newWindowHeight = monitorGeometry.height * scaleFactor - Main.panel.height;
 
+          window.set_unmaximize_flags(Meta.MaximizeFlags.BOTH);
           window.unmaximize(Meta.MaximizeFlags.BOTH);
 
           window.move_resize_frame(
@@ -77,7 +78,8 @@ export default class PerfectFitExtension extends Extension {
 
           const windowRect = window.get_frame_rect();
 
-          window.unmaximize(Meta.MaximizeFlags.BOTH);
+          window.set_unmaximize_flags(Meta.MaximizeFlags.BOTH);
+          window.unmaximize();
 
           window.move_frame(
             true,
