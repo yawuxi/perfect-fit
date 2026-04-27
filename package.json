@@ -15,11 +15,12 @@
   },
   "homepage": "https://github.com/yawuxi/perfect-fit#readme",
   "devDependencies": {
+    "@girs/gnome-shell": "^49.1.0",
     "eslint": "^9.21.0",
     "eslint-plugin-jsdoc": "^50.6.3",
     "typescript": "^5.8.2"
   },
   "dependencies": {
-    "@girs/gjs": "^4.0.0-rc.4"
+    "@girs/gjs": "^4.0.0-rc.5"
   }
 }

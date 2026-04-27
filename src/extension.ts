@@ -16,7 +16,7 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-import { Extension, ExtensionMetadata } from 'resource:///org/gnome/shell/extensions/extension.js';
+import { Extension} from 'resource:///org/gnome/shell/extensions/extension.js';
 import Shell from 'gi://Shell'
 import Gio from 'gi://Gio';
 import Meta from 'gi://Meta';
@@ -25,10 +25,6 @@ import * as Main from 'resource:///org/gnome/shell/ui/main.js';
 export default class PerfectFitExtension extends Extension {
   private _settings: Gio.Settings | null;
   private _focusSignalId: number | undefined;
-
-  constructor(metadata: ExtensionMetadata) {
-    super(metadata);
-  }
 
   enable() {
     this._settings = this.getSettings();
@@ -51,7 +47,7 @@ export default class PerfectFitExtension extends Extension {
           const newWindowHeight = monitorGeometry.height * scaleFactor - Main.panel.height;
 
           window.set_unmaximize_flags(Meta.MaximizeFlags.BOTH);
-          window.unmaximize(Meta.MaximizeFlags.BOTH);
+          window.unmaximize();
 
           window.move_resize_frame(
             true,
