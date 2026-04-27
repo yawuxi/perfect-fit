@@ -16,7 +16,7 @@ build: clean node_modules src/schemas/org.gnome.shell.extensions.perfect-fit.gsc
 	cp src/schemas/*  dist/schemas && \
 	tsc && \
 	cd ./dist && \
-	zip -r -3 perfect-fit ./ && \
+	zip -r -3 perfect-fit ./ -x schemas/gschemas.compiled && \
 	echo 'BUILD SUCCESS'
 
 install-local: clean build
